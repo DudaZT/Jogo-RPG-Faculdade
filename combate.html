@@ -1,0 +1,81 @@
+<!-- 
+• Desenvolver um site responsivo
+• Deve-se considerar a acessibilidade
+• Ter um formulário, contendo pelo menos 3 campos e dois botões, sendo um deles um
+botão para limpar os campos
+• Validar a entrada no formulário com JavaScript
+• Utilizar métodos do HTML DOM para manipular os elementos (conteúdo apresentado
+na página, estilos, etc.)
+• Acessibilidade (no mínimo)
+• Considerar a navegação por teclado (sem mouse)
+• Considerar o contraste das cores
+• Textos explicativos das imagens (alt)
+• Usar Sites de validação e NÃO ter erros 
+
+https://validator.w3.org
+https://jigsaw.w3.org/css-validator/
+https://wave.webaim.org
+
+Requisitos extras (não obrigatórios):
+• Utilizar Cookies, Web Storage e/ou Expressões Regulares
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Prático - RPG </title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;700&display=swap" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <main>
+        <!-- Página do Jogo -->
+        
+        <div class="container-jogo">
+            <div class="container-combate">
+                <div class="acoes" id="acoes">
+                    <div class="heroi">
+                        <img id="imagemHeroi" class="imagem-heroi" src="./img/heroi1.png" alt="Imagem do Herói">
+                        <p id="heroiStatus"></p>
+                    </div>
+                    
+                    <button class="botao-jogo" id="ataqueBasico">Ataque Básico</button>
+                    <button class="botao-jogo" id="ataqueEspecial">Ataque Especial</button>
+                    <button class="botao-jogo" id="defesaBasica">Defesa Básica</button>
+                    <button class="botao-jogo" id="defesaEspecial">Defesa Especial</button>
+                </div>
+                <div class="area">
+                   
+                    <img class="inimigo" src="./img/Touro.png" alt="Imagem do Inimigo">
+                    <p id="inimigoStatus"></p>
+                    
+                    <p id="mensagemJogo"></p>
+                    <div class="botoes">
+                        <button id="recomecar" class="button-jogo">Recomeçar</button>
+                        <a class="button-jogo" href="index.html">Página Inicial</a>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+            
+        </div>
+        
+    </main>
+    
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="js/rpg.js" defer></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!-- 
+• Desenvolver um site responsivo
+• Deve-se considerar a acessibilidade
+• Ter um formulário, contendo pelo menos 3 campos e dois botões, sendo um deles um
+botão para limpar os campos
+• Validar a entrada no formulário com JavaScript
+• Utilizar métodos do HTML DOM para manipular os elementos (conteúdo apresentado
+na página, estilos, etc.)
+• Acessibilidade (no mínimo)
+• Considerar a navegação por teclado (sem mouse)
+• Considerar o contraste das cores
+• Textos explicativos das imagens (alt)
+• Usar Sites de validação e NÃO ter erros 
+
+https://validator.w3.org
+https://jigsaw.w3.org/css-validator/
+https://wave.webaim.org
+
+Requisitos extras (não obrigatórios):
+• Utilizar Cookies, Web Storage e/ou Expressões Regulares
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Prático - RPG </title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;700&display=swap" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Jogo RPG</h1>    
+        </div>
+        <nav>
+            <!-- Título do Jogo, Início, Jogo e Contate-nos -->
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="contato.html" class="active">Contate-nos</a></li>
+            </ul>
+        </nav>
+        <a class="button" href="jogar.html">Jogar</a>
+    </header>
+    <main>
+        <!-- Página de Formulário -->
+        <div class="container">
+            <div class="formulario">
+                <form action="#" id="formulario">
+                    <h3>Formulário</h3>
+                    
+                    <div class="campo">
+                        <label for="nome">Qual seu nome?</label>
+                        <input type="text" name="nome" id="nome">
+                    </div>
+                    
+                    <div class="campo">
+                        <label for="idade">Qual sua idade?</label>
+                        <input type="number" name="idade" id="idade">
+                    </div>
+
+                    <div class="campo">
+                        <label for="melhorias">Deseja falar uma sugestão de melhoria para o nosso RPG?</label>
+                        <textarea name="melhorias" id="melhorias"></textarea>
+                    </div>  
+                    
+                    <div class="campo">
+                        <label for="mensagem">Gostaria de deixar uma mensagem para os desenvolvedores?</label>
+                        <textarea name="mensagem" id="mensagem"></textarea>
+                    </div>
+
+                    <div class="botao-container">
+                        <button type="submit" class="button">Enviar</button>
+                        <button type="reset" class="button">Limpar</button>
+                    </div>
+
+                    <div class="campo">
+                        <p>Agradecemos por Participar!</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <br><br>
+
+        
+    </main>
+    <footer>
+        <p>&copy; Desenvolvido por Christian e Maria Eduarda</p>
+    </footer>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="js/expressoes-regulares.js"></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+</html>
